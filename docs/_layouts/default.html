@@ -6,11 +6,13 @@
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
     <meta name="viewport" content="width=device-width,maximum-scale=2">
     <meta name="description" content="{{ site.title | default: site.github.repository_name }} : {{ site.description | default: site.github.project_tagline }}">
-    <script src="{{ '/assets/js/jquery-1.12.4.min.js' }}"></script>
-    <script src="{{ '/assets/js/anchor.min.js' }}"></script>
-    <script src="{{ '/assets/js/anchor.js' }}"></script>
-    <link rel="shortcut icon" href="/favicon.ico">
-    <link rel="stylesheet" type="text/css" media="screen" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision  }}">
+    <script src="{% link /assets/js/jquery-1.12.4.min.js %}"></script>
+    <script src="{% link /assets/js/anchor.min.js %}"></script>
+    <script src="{% link /assets/js/default.js %}"></script>
+    {% for script in page.include_scripts %}<script src="/assets/js/{{ script }}"></script>
+    {% endfor %}
+    <link rel="shortcut icon" href="{% link /favicon.ico %}">
+    <link rel="stylesheet" type="text/css" media="screen" href="{{ site.baseurl }}{{ '/assets/css/style.css?v=' | append: site.github.build_revision  }}">
 
     <title>{{ page.title | default: site.github.repository_name }}</title>
   </head>
@@ -26,9 +28,9 @@
           <div class="nav-mozilla">
             <span class="toggle" role="button" aria-controls="nav-mozilla-menu" aria-expanded="false" tabindex="0">Menu</span>
             <ul class="nav-mozilla-menu" id="nav-mozilla-menu">
-              <li class="nav-global-home"><a href="{{ '/' }}">home</a></li>
-              <li class="nav-global-fundamentals"><a href="{{ '/fundamentals/' }}">security fundamentals</a></li>
-              <li class="nav-global-guidelines"><a href="{{ '/guidelines/' }}">security guidelines</a></li>
+              <li class="nav-global-home"><a href="{% link index.md %}">home</a></li>
+              <li class="nav-global-fundamentals"><a href="{% link fundamentals/index.md %}">security fundamentals</a></li>
+              <li class="nav-global-guidelines"><a href="{% link guidelines/index.md %}">security guidelines</a></li>
               <li class="nav-global-participate"><a href="{{ site.github.repository_url }}/blob/master/docs/{{ page.path }}">Improve this document</a></li>
               <li class="nav-global-firefox"><a href="https://www.mozilla.org/firefox/products/" rel="external">Discover Firefox</a></li>
             </ul>
@@ -53,7 +55,7 @@
         <section class="col col-1">
           <div class="logo"><a href="https://www.mozilla.org" rel="external" title="Visit mozilla.org">Mozilla</a></div>
           <p id="license" class="license">
-          ©2017 by individual contributors. Content available under a <a href="https://www.mozilla.org/foundation/licensing/website-content/" rel="external license">Creative Commons license</a>        </p>
+          ©2021 by individual contributors. Content available under the <a href="https://www.mozilla.org/foundation/licensing/website-content/" rel="external license">Creative Commons Attribution Share-Alike 3.0 Unported license</a>        </p>
         </section>
 
         <section class="col col-2">

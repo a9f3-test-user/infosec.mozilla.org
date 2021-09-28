@@ -26,7 +26,7 @@ Ensure Ruby, Gem and Bundle are installed.
 
 - Checkout a copy of this repository (feel free to fork it first, specially if you're going to propose changes).
 - Go into the `docs` sub-directory.
-- Run `bundle install` to ensure all dependencies are installed.
+- Run `bundle install` to install the correct version of jekyll and all dependencies (via the `github-pages` gem).
 - Run `bundle exec jekyll serve` to locally serve contents for testing.
 
 ## Site setup

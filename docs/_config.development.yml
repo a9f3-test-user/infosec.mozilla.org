@@ -1,0 +1,32 @@
+# See https://jekyllrb.com/docs/configuration/
+
+# This config is used for the copy of the site hosted at mozilla.github.io/infosec.mozilla.org/dev/
+# The only two differences this config has from _config.yml are
+# * The "environment" is "development" in this config and "production" in _config.yml
+# * The "baseurl" is "/infosec.mozilla.org/dev" in this config and "/" in _config.yml
+# This additional copy of the site is published to the /dev/ path via the GitHub Action
+# This allows for viewing the site on a fork before PRing or merging into the upstream
+# For example, this copy of the site could be seen at https://octocat.gihub.io/infosec.mozilla.org/dev/
+# if octocat had forked the mozilla/infosec.mozilla.org repo
+environment: development
+
+# To use the dev site you will need to enable GitHub pages on your fork in the repo's settings
+
+theme: jekyll-theme-slate
+# This baseurl sets all the links to the correct path for the dev site
+baseurl: /infosec.mozilla.org/dev
+sass:
+  sass_dir: _sass
+
+# https://pages.github.com/versions/
+# https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/about-github-pages-and-jekyll#plugins
+plugins:
+  - jekyll-coffeescript
+  - jekyll-default-layout
+  - jekyll-gist
+  - jekyll-github-metadata
+  - jekyll-optional-front-matter
+  - jekyll-paginate
+  - jekyll-readme-index
+  - jekyll-titles-from-headings
+  - jekyll-relative-links

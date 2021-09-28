@@ -1,5 +1,24 @@
 # See https://jekyllrb.com/docs/configuration/
+
+# This config is used for the AWS CloudFront fronted production version of the site found at infosec.mozilla.org
+environment: production
+
 theme: jekyll-theme-slate
+# This baseurl is needed as the site is available both at https://mozilla.github.io/infosec.mozilla.org/ (in which all links will be broken)
+# and https://infosec.mozilla.org/ where this baseurl will make all the links correct
 baseurl: /
 sass:
     sass_dir: _sass
+
+# https://pages.github.com/versions/
+# https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/about-github-pages-and-jekyll#plugins
+plugins:
+    - jekyll-coffeescript
+    - jekyll-default-layout
+    - jekyll-gist
+    - jekyll-github-metadata
+    - jekyll-optional-front-matter
+    - jekyll-paginate
+    - jekyll-readme-index
+    - jekyll-titles-from-headings
+    - jekyll-relative-links

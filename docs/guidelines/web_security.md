@@ -4,6 +4,9 @@ resource: true
 categories: [Guidelines]
 title: Web Security
 description: What headers, setup, etc. should you follow for your web site?
+include_scripts:
+  - jquery.tablesorter.min.js
+  - web_security.js
 ---
 
 *The goal of this document is to help operational teams with creating secure web applications. All Mozilla sites and deployments are expected to follow the recommendations below. Use of these recommendations by the public is strongly encouraged.
@@ -863,6 +866,3 @@ X-XSS-Protection: 1; mode=block
 | October, 2016  | April  | Updates to CSP recommendations                                   |
 | July, 2016     | April  | Updates to CSP for APIs, and CSP's deprecation of XFO, and XXSSP |
 | February, 2016 | April  | Initial document creation                                        |
-
-<script src="/assets/js/jquery.tablesorter.min.js"></script>
-<script src="/assets/js/sortable.js"></script>
