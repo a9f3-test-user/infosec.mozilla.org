@@ -3,7 +3,7 @@
 # This config is used for the AWS CloudFront fronted production version of the site found at infosec.mozilla.org
 environment: production
 
-theme: jekyll-theme-slate
+remote_theme: pages-themes/slate@v0.2.0
 # This baseurl is needed as the site is available both at https://mozilla.github.io/infosec.mozilla.org/ (in which all links will be broken)
 # and https://infosec.mozilla.org/ where this baseurl will make all the links correct
 baseurl: /
