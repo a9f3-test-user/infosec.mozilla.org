@@ -16,17 +16,18 @@ theme: jekyll-theme-slate
 # This baseurl sets all the links to the correct path for the dev site
 baseurl: /infosec.mozilla.org/dev
 sass:
-  sass_dir: _sass
+    sass_dir: _sass
 
 # https://pages.github.com/versions/
 # https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/about-github-pages-and-jekyll#plugins
 plugins:
-  - jekyll-coffeescript
-  - jekyll-default-layout
-  - jekyll-gist
-  - jekyll-github-metadata
-  - jekyll-optional-front-matter
-  - jekyll-paginate
-  - jekyll-readme-index
-  - jekyll-titles-from-headings
-  - jekyll-relative-links
+    - jekyll-coffeescript
+    - jekyll-default-layout
+    - jekyll-gist
+    - jekyll-github-metadata
+    - jekyll-optional-front-matter
+    - jekyll-paginate
+    - jekyll-readme-index
+    - jekyll-titles-from-headings
+    - jekyll-relative-links
+    - jekyll-remote-theme
