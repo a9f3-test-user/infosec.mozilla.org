@@ -16,13 +16,13 @@ jobs:
           key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile') }}
           restore-keys: |
             ${{ runner.os }}-gems-
-      - uses: helaili/jekyll-action@v2
+      - uses: helaili/jekyll-action@64b759fc0e18682ff47a0522072df02762a76af2
         with:
           target_branch: gh-pages
           target_path: /
           jekyll_env: production
           token: ${{ secrets.GITHUB_TOKEN }}
-      - uses: helaili/jekyll-action@v2
+      - uses: helaili/jekyll-action@64b759fc0e18682ff47a0522072df02762a76af2
         with:
           target_branch: gh-pages
           target_path: dev
